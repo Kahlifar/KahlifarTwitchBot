@@ -5,6 +5,5 @@ module.exports = {
     name: 'message',
     once: false,
     execute(channel: string, user: ChatUserstate, message: string, self: boolean, client: TmiClient) {
-        console.log(user.badges);
     }
 }
