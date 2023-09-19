@@ -1,8 +1,10 @@
+import { I18n } from 'i18n';
 import { Client } from 'tmi.js';
 // Define a new class that extends the tmi.js Client class
 export class TmiClient extends Client {
     config: any;
     commands: Map<String, any>;
+    localizator: I18n;
     constructor() {
         super({
             options: { 
@@ -21,5 +23,15 @@ export class TmiClient extends Client {
 
         this.config = require(`${process.cwd()}/properties.json`);
         this.commands = new Map();
+        this.localizator = new I18n({
+            locales: ['de', 'en'],
+            directory: './locales',
+            defaultLocale: 'en',
+            objectNotation: true,
+            register: global,
+            updateFiles: false,
+            indent: '  ',
+            extension: '.json'
+        });
     }
 }
