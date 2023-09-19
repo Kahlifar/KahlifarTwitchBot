@@ -5,7 +5,9 @@ export class TmiClient extends Client {
     commands: Map<String, any>;
     constructor() {
         super({
-            options: { debug: true },
+            options: { 
+                debug: false, 
+            },
             connection: {
                 reconnect: true,
                 secure: true
@@ -17,7 +19,6 @@ export class TmiClient extends Client {
             channels: ['kahlifar']
         });
 
-        // Add your custom properties to the client instance
         this.config = require(`${process.cwd()}/properties.json`);
         this.commands = new Map();
     }
