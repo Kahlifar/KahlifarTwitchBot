@@ -12,9 +12,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/i18n": "^0.13.6",
     "@types/tmi.js": "^1.8.4",
     "ascii-table3": "^0.8.2",
     "dotenv": "^16.3.1",
+    "i18n": "^0.15.1",
     "tmi.js": "^1.8.5"
   },
   "devDependencies": {
