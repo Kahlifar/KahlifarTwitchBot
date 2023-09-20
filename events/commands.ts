@@ -1,10 +1,10 @@
 import { ChatUserstate } from 'tmi.js';
-import { TmiClient } from '../types/TmiClient';
+import { TwitchClient } from '../types/TwitchClient';
 
 module.exports = {
     name: 'message',
     once: false,
-    execute(channel: string, user: ChatUserstate, message: string, self: boolean, client: TmiClient) {
+    execute(channel: string, user: ChatUserstate, message: string, self: boolean, client: TwitchClient) {
         if (self) return; // Ignore messages from the bot itself
         const PREFIX = client.config.prefix;
         if (message.startsWith(PREFIX)) {

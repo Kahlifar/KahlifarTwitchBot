@@ -1,8 +1,8 @@
 import fs from 'fs';
-import { TmiClient } from '../types/TmiClient';
+import { TwitchClient } from '../types/TwitchClient';
 
 // Function to load events from the events directory
-export function loadEvents(client: TmiClient) {
+export function loadEvents(client: TwitchClient) {
   const eventFiles = fs.readdirSync(`${process.cwd()}/events`).filter(file => file.endsWith('.ts'));
 
   for (const file of eventFiles) {

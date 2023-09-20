@@ -10,14 +10,15 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "dependencies": {
+    "@twurple/api": "^7.0.2",
+    "@twurple/auth": "^7.0.2",
+    "@twurple/chat": "^7.0.2",
     "@types/i18n": "^0.13.6",
-    "@types/tmi.js": "^1.8.4",
     "ascii-table3": "^0.8.2",
     "dotenv": "^16.3.1",
-    "i18n": "^0.15.1",
-    "tmi.js": "^1.8.5"
+    "i18n": "^0.15.1"
   },
   "devDependencies": {
     "ts-node": "^10.9.1",

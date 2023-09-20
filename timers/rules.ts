@@ -1,12 +1,12 @@
 import { Timer } from "../types/Timer";
-import { TmiClient } from "../types/TmiClient";
+import { TwitchClient } from "../types/TwitchClient";
 
 
 module.exports = new Timer(
     'rules',
     5 * 60,
     0,
-    (client: TmiClient) => {
+    (client: TwitchClient) => {
         client.say(client.config.channel, client.localizator.__('rules'));
     }
 )

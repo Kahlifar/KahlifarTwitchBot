@@ -1,4 +1,4 @@
-import { TmiClient } from "./TmiClient";
+import { TwitchClient } from "./TwitchClient";
 import Timeout = NodeJS.Timeout;
 
 export class Timer {
@@ -16,7 +16,7 @@ export class Timer {
         this.callback = callback;
     }
 
-    start(client: TmiClient) {
+    start(client: TwitchClient) {
         setTimeout(() => {
             this.intervalId = setInterval(() => this.callback(client), this.interval * 1000);
         }, this.offset * 1000);
